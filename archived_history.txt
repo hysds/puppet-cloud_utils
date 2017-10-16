@@ -1,0 +1,11 @@
+commit 10753d7d15b20ed0bb20ffb7c8d6ab4f09d3c776
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Oct 6 13:18:56 2015 +0000
+
+    handle AWS dropping of idle ssh connections
+
+commit 6a56540dc4b16c2482664c8e5bef5da148a2a086
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Oct 1 18:42:13 2015 +0000
+
+    factor out cloud utilities
