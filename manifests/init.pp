@@ -27,34 +27,4 @@ class cloud_utils inherits scientific_python {
   }
 
 
-  #####################################################
-  # configure sshd to not drop idle connections
-  #####################################################
-
-  service { 'sshd':
-    ensure     => running,
-    enable     => true,
-    hasrestart => true,
-    hasstatus  => true,
-  }
-
-
-  file_line { "ClientAliveInterval":
-    ensure => present,
-    line   => "ClientAliveInterval 30",
-    path   => "/etc/ssh/sshd_config",
-    match  => "^ClientAliveInterval",
-    notify => Service['sshd'],
-  }
-
-
-  file_line { "ClientAliveCountMax":
-    ensure => present,
-    line   => "ClientAliveCountMax 99999",
-    path   => "/etc/ssh/sshd_config",
-    match  => "^ClientAliveCountMax",
-    notify => Service['sshd'],
-  }
-
-
 }
