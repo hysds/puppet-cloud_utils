@@ -18,7 +18,7 @@ class cloud_utils inherits scientific_python {
   package { "azure-cli":
     provider => rpm,
     ensure   => present,
-    source   => "/etc/puppet/modules/cloud_utils/files/azure-cli-2.0.31-1.el7.x86_64.rpm",
+    source   => "/etc/puppet/modules/cloud_utils/files/azure-cli-2.0.55-1.el7.x86_64.rpm",
     require => Package["python-virtualenv"],
   }
 
