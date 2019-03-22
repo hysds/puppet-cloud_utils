@@ -7,7 +7,7 @@ cd $mods_dir
 # IMPORTANT: please edit this branch name to the version of the Azure         #
 #            adaptation that you want to install on every Puppet module       #
 ###############################################################################
-git_branch="azure-beta1"
+git_branch="azure"
 
 ##########################################
 # need to be root
@@ -65,7 +65,7 @@ fi
 # export scientific_python puppet module
 ##########################################
 
-git_loc="${git_url}/earthobservatory/puppet-scientific_python"
+git_loc="${git_url}/hysds/puppet-scientific_python"
 mod_dir=$mods_dir/scientific_python
 site_pp=$mod_dir/site.pp
 
@@ -79,7 +79,7 @@ fi
 # export cloud_utils puppet module
 ##########################################
 
-git_loc="${git_url}/earthobservatory/puppet-cloud_utils"
+git_loc="${git_url}/hysds/puppet-cloud_utils"
 mod_dir=$mods_dir/cloud_utils
 site_pp=$mod_dir/site.pp
 
