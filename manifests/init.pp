@@ -15,6 +15,20 @@ class cloud_utils inherits scientific_python {
     require => Package["python-virtualenv"],
   }
 
+  package { "azure-cli":
+    provider => rpm,
+    ensure   => present,
+    source   => "/etc/puppet/modules/cloud_utils/files/azure-cli-2.0.55-1.el7.x86_64.rpm",
+    require => Package["python-virtualenv"],
+  }
+
+  file_line { "AzureAuthLocation":
+    ensure => present,
+    path   => "/home/ops/.bashrc",
+    line   => "export AZURE_AUTH_LOCATION=~/.azure/azure_credentials.json",
+    match  => "^export AZURE_AUTH_LOCATION=",
+  }
+
 
   #####################################################
   # install gof3r
